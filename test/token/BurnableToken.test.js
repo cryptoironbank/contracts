@@ -1,6 +1,6 @@
 
 const EVMRevert = require('../helpers/EVMRevert.js');
-const BurnableTokenMock = artifacts.require('BurnableTokenMock');
+const IronBankTokenMock = artifacts.require('IronBankTokenMock');
 const BigNumber = web3.BigNumber;
 
 require('chai')
@@ -10,12 +10,12 @@ require('chai')
 
 const expect = require('chai').expect;
 
-contract('BurnableToken', function (accounts) {
+contract('IronBankToken', function (accounts) {
   let token;
   let expectedTokenSupply = new BigNumber(999);
 
   beforeEach(async function () {
-    token = await BurnableTokenMock.new(accounts[0], 1000);
+    token = await IronBankTokenMock.new(accounts[0], 1000);
   });
 
   it('owner should be able to burn tokens', async function () {

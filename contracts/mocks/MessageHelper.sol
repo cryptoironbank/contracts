@@ -1,5 +1,6 @@
 pragma solidity ^0.4.11;
 
+
 contract MessageHelper {
 
   event Show(bytes32 b32, uint256 number, string text);
@@ -9,7 +10,7 @@ contract MessageHelper {
     return true;
   }
 
-  function fail() public {
+  function fail() public pure {
     require(false);
   }
 
